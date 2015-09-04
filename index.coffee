@@ -1,6 +1,6 @@
 Hapi = require 'hapi'
 server = new Hapi.Server()
-server.connection({port: 5000})
+server.connection({port: process.env.PORT or 5000})
 
 
 ###

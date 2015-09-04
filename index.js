@@ -6,7 +6,7 @@ Hapi = require('hapi');
 server = new Hapi.Server();
 
 server.connection({
-  port: 5000
+  port: process.env.PORT || 5000
 });
 
 
