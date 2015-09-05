@@ -1,7 +1,7 @@
 Hapi = require 'hapi'
 server = new Hapi.Server()
 server.connection({port: process.env.PORT or 5000})
-
+client = require('redis').createClient( process.env.REDIS_URL );
 
 ###
 REGISTER VIEWS
