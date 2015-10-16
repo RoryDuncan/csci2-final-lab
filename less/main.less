@@ -1,0 +1,187 @@
+
+
+@import 'grid.less';
+
+@colors: #E9E0D1, #91A398, #33605A, #070001, #68462B;
+
+
+
+@c1: extract(@colors, 1);
+@c2: extract(@colors, 2);
+@c3: extract(@colors, 3);
+@c4: extract(@colors, 4);
+@c5: extract(@colors, 5);
+
+
+body {
+  font: 18px/28px "Quicksand", sans-serif;
+  background-color: @c1;
+  color: @c3;
+  overflow: hidden;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.content {
+  min-height: 950px;
+
+}
+
+a {
+  color: @c5;
+  text-decoration: none;
+}
+
+
+.header {
+  background-color: #222;
+  height: 80px;
+  .logo {
+    color: @c2;
+    font-size: 1.35em;
+    line-height: 80px;
+  }
+
+  ul.nav {
+    padding: 0px 0px;
+    list-style: none;
+    text-align: right;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        padding: 8px 16px 8px 16px;
+        color: lighten(@c2, 10%);
+        &:hover {
+          color: lighten(@c2, 25%);
+        }
+
+      }
+    }
+  }
+}
+
+
+.signup-form-wrapper {
+  background-color: @c2;
+  border-radius: 3px;
+
+  a {
+    color: @c1;
+    font-size: 0.7em;
+    text-align: center;
+    display: block;
+    &:hover {
+      color: lighten(@c1, 10%);
+      text-decoration: underline;
+    }
+
+  }
+  #signup {
+    padding: 10px 10px;
+    min-height: 300px;
+    label, input {
+      display: block;
+      margin: 4px 0px;
+    }
+
+    label {
+      font-size: 0.7em;
+      margin-bottom: 0px;
+      color: lighten(@c1, 20%);
+      position: relative;
+      top: 8px;
+
+    }
+
+    input {
+
+      width: 100%;
+      padding: 8px 8px;
+      border: none;
+      border-left: 5px solid lighten(@c2, 12%);
+      background-color: lighten(@c2, 10%);
+      color: @c4;
+      &:active,
+      &:focus {
+        outline: none;
+        background-color: lighten(@c2, 18%);
+        transition: 0.15s ease-out all;
+      }
+
+
+    }
+    .input-wrapper {
+      padding: 4px 10px;
+    }
+
+    input[type=submit] {
+      background-color: lighten(@c2, 10%);
+      width: auto;
+      padding: 10px 15px;
+      color: #222;
+      font-weight: 600;
+
+      margin: 10px auto;
+      border: none;
+      &:hover {
+        background-color: lighten(@c2, 20%);
+      }
+    }
+  }
+}
+
+.hero {
+  min-height: 800px;
+  background-color: @c1;
+  background-image: url('/images/tree_bark.png');
+  //background-blend-mode: color-burn;
+  //background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  padding: 150px 0px;
+  h1 {
+    background-color: #fff;
+    color: @c2;
+    margin-top: 0px;
+    font-size: 2.7em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding: 24px 12px;
+  }
+  .welcome {
+    border-radius: 5px;
+    background-color: #fcfcfc;
+    min-height: 300px;
+
+
+  }
+  p {
+    padding: 12px 12px;
+    color: @c5;
+    font-weight: 400;
+  }
+}
+
+.actions {
+  background-color: lighten(@c2, 10%);
+  min-height: 300px;
+  h3 {
+    text-align: center;
+    padding: 12px 20px;
+    margin-top: 0px;
+  }
+  a {
+    text-align: center;
+    padding: 4px 20px;
+    display: block;
+    color: @c1;
+    &:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+  }
+
+}

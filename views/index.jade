@@ -1,3 +1,41 @@
-
+extends shared/layout.jade
+block head
+  title=("Home - " + title)
 block content
-  h1 Hella World
+  .hero
+    .wrapper
+      .row
+        .col.w16
+          .welcome
+            if user
+              h1 Welcome, #{user.username}!
+            else
+              h1 Welcome!
+            p
+              | This is a test user account app.
+              br
+              | There's very little to do.
+              br
+              | sorry :/
+        .col.w8
+          if !user
+            .signup-form-wrapper
+              form#signup(action="/signup", method="POST")
+                .input-wrapper
+                  label(for="username") username
+                  input(type="text", id="username", name="username", max-length=16, value="hello")
+
+                .input-wrapper
+                  label(for="password") password
+                  input(type="text", id="password", name="password", value="world")
+
+                .input-wrapper
+                  input.btn(type="submit" value="Sign Up")
+                  a(href="/login") Already have an account?
+
+          else
+            .actions
+              h3 Actions
+              a.brn(href="/logout") Logout
+              a.brn(href="/users") View Other Users
+

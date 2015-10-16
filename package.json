@@ -6,9 +6,13 @@
   "dependencies": {
     "browserify": "^11.0.1",
     "dotenv": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
     "hapi": "^8.4.0",
     "hapi-auth-basic": "^3.0.0",
+    "hapi-auth-cookie": "^3.1.0",
     "jade": "^1.11.0",
+    "joi": "^6.6.1",
     "redis": "^1.0.0",
     "vision": "^3.0.0"
   },

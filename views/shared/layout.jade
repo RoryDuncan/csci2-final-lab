@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+- var webfonts = 'https://fonts.googleapis.com/css?family=Montserrat:700|Quicksand:400,300,700'
+- var title = "Site Name"
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  block head
+    title=title
+  link(rel="stylesheet", href="/css/normalize.css")
+  link(rel="stylesheet", href="/css/main.css")
+  link(rel="stylesheet", type="text/css", href=webfonts)
+body
+  block header
+    include header.jade
+  .content
+    block content
+  block scripts
+  block footer
+    include footer.jade
